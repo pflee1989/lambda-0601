@@ -1,0 +1,25 @@
+import sklearn
+import numpy
+import pandas 
+
+
+def null_count(df):
+    return df.insull().sum().sum()
+
+
+def train_test_split(df, frac):
+    len23rd = int(round(len(df_main)*(1-frac),0))
+  len13rd = int(round(len(df_main)*(frac),0))
+    # assert len23rd + len13rd == len(df) or "redo"
+  df_train = df_main.iloc[0:(len23rd+1)]
+  df_val = df_main.iloc[0:(len13rd+1)]
+  return df_train, df_val
+
+def randomize(df, frac):
+    df = df_main.sample(frac=frac).reset_index(drop=True)
+  return df
+
+
+def list_2_series(list_2_series, df):
+      df = pd.DataFrame(list_2_series)
+  
