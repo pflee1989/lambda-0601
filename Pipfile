@@ -10,6 +10,9 @@ pandas = "*"
 matplotlib = "*"
 scipy = "*"
 sklearn = "*"
+jupyter = "*"
+notebook = "*"
+pytest = "*"
 
 [dev-packages]
 

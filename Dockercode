@@ -1,0 +1,37 @@
+Santiago's Code
+
+FROM debian
+
+##Setting Shell so pipenv shell works
+
+ENV SHELL=/bin/bash
+
+### Updte and install dependencies
+
+RUN  apt update &&  \
+     apt upgrade -y && \
+     apt install python3-pip -y && \
+     pip3 install pandas && \
+     pip3 install regex && \
+     pip3 install -i https://test.pypi.org/simple/ lambdata-sberniz
+
+Nick's Code
+FROM ubuntu
+RUN apt update && \
+    apt upgrade -y && \
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+    pip3 install pandas numpy
+
+
+My Hybrid Code
+FROM ubuntu
+
+ENV PYTHONBUFFER = 1
+
+RUN apt update && \
+    apt upgrade -y && \
+    apt install curl -y && \
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py -y && \
+    apt install python3 -y && \
+    apt install python3-pip -y && \
+COPY helper_functions.py .

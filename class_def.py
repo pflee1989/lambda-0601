@@ -28,16 +28,16 @@ class Date_Time:
     def __repr__(self): 
         return 'Date_Time'
 
-class split_all_datetime:
-    def __init__(self,datetime):
-        self.series = datetime    
-    def split_dates(datetime):
-        X = datetime.copy()
-        for col in X:
-            if X[col].dtypes == '<M8[ns]':
-                X[col+"year"] = X[col].dt.year
-                X[col+"month"] = X[col].dt.month
-                X[col+"day"] = X[col].dt.day
-        return X
-    def __repr__(self): 
-        return 'split_all_datetime'
+# class split_all_datetime:
+#     def __init__(self,datetime):
+#         self.series = datetime    
+#     def split_dates(datetime):
+#         X = datetime.copy()
+#         for col in X:
+#             if X[col].dtypes == '<M8[ns]':
+#                 X[col+"year"] = X[col].dt.year
+#                 X[col+"month"] = X[col].dt.month
+#                 X[col+"day"] = X[col].dt.day
+#         return X
+#     def __repr__(self): 
+#         return 'split_all_datetime'
